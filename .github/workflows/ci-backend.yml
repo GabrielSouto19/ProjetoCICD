@@ -17,10 +17,10 @@ jobs:
                   python-version: "3.12"
             
             - name: Instalar uv
-              run: pip install uv
+              uses: astral-sh/setup-uv@v5
 
             - name: instalar dependencias
-              run: uv sync  
+              run: uv sync 
             
             - name: Rodando os testes
               run: uv run pytest .  
