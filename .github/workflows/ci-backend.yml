@@ -1,0 +1,15 @@
+name: pipeline-cicd
+on: 
+    [push,pull_request]
+
+jobs:
+    Test:
+        runs-on: ubuntu:latest
+        
+        steps:
+            - name: Copiar os arquivos para o container
+            - uses: actions/checkout@v3
+            # actions vai fazer o clone do repositório para o container no github
+
+            - name:
+    
