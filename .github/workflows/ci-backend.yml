@@ -13,6 +13,14 @@ jobs:
 
             # - name: copiar python para dentro do container 
             - uses: actions/setup-python@v4 
+            with:
+                python-version:"3.12"
+            - name: Instalando o poetry
+            -run: pip install uv
+            
+            - name: Rodando os testes
+            -run: uv run pytest .  
+
             
             
     
