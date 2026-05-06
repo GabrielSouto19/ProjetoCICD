@@ -6,21 +6,21 @@ jobs:
     Test:
         runs-on: ubuntu:latest
         
-        steps:
-            - name: Copiar os arquivos para o container
-            - uses: actions/checkout@v3
-            
+    steps:
+        - name: Copiar os arquivos para o container
+        - uses: actions/checkout@v3
+        
 
-            - name: copiar python para dentro do container 
-            - uses: actions/setup-python@v4 
-            with:
-                python-version:"3.12"
-            
-            - name: Instalando o poetry
-            - run: pip install uv
-            
-            - name: Rodando os testes
-            -run: uv run pytest .  
+        - name: copiar python para dentro do container 
+        - uses: actions/setup-python@v4 
+        with:
+            python-version:"3.12"
+        
+        - name: Instalando o poetry
+        - run: pip install uv
+        
+        - name: Rodando os testes
+        - run: uv run pytest .  
 
             
             
