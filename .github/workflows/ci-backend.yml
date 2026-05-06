@@ -18,6 +18,9 @@ jobs:
             
             - name: Instalar uv
               run: pip install uv
+
+            - name: instalar dependencias
+              run: uv sync  
             
             - name: Rodando os testes
               run: uv run pytest .  
